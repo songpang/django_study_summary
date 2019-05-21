@@ -21,4 +21,30 @@
 
 -> MTV의 <VIEW>, MVC의 <CONTROLLER>가 패턴의 실제 동작하는 부분.
   
-  
+## 템플릿 변수
+> HTML안에 파이썬 변수/문법을 쓰고 싶을 때 사용
+```
+{{ python_value }}
+```
+
+해당 파이썬 변수를 HTML파일에 담아 출력하기 위해 쓰는 변수.
+
+
+### 템플릿 필터
+> 템플릿 변수에 추가적인 속성 및 기능 제공
+```
+{{ python_value | filter }}
+```
+
+e.g. 
+```
+{{ python_value | length}} 
+```
+value의 길이 반환
+```
+{{ python_value | lower }}
+```
+value를 소문자로 출력
+
+
+
