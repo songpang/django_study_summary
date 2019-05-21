@@ -36,7 +36,7 @@
 {{ python_value | filter }}
 ```
 
-e.g. 
+- e.g. 
 ```
 {{ python_value | length}} 
 ```
@@ -45,6 +45,60 @@ value의 길이 반환
 {{ python_value | lower }}
 ```
 value를 소문자로 출력
+
+### 템플릿 태그
+> html상에서 파이썬 문법 사용, url 생성등의 기능 제공
+
+```
+{% tag %} ..... {% endtag %}
+```
+항상 endtag가 있어야 함
+
+- e.g.
+1. for
+
+in Python file
+```
+Aclass = ["민철", "철수", "영희"]
+```
+
+in HTML file
+```
+number of students = {{class | length}}
+
+{% for students in class %}
+  {{students}}
+{% endfor %}
+```
+
+2. if
+
+in HTML file
+```
+number of students = {{class | length}}
+
+{% if score > 80 %}
+  A+
+{% elif score > 60 %}
+  B+
+{% elif score > 40 %}
+  C+
+{% else %}
+  교수님, 저 다시 왔습니다.
+{% endif %}
+```
+
+3. url 생성
+> 해당하는 위치에 해당하는 url이 생성
+
+```
+{% url 'url_name' %}
+```
+
+
+
+
+
 
 
 
